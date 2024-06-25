@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        .image-container {
+            width: 100%;
+            height: 320px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+        }
+        #dropArea {
+            border: 2px dashed #ccc;
+            border-radius: 20px;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #dropArea.highlight {
+            border-color: #007bff;
+            background-color: #f0f8ff;
+        }
+        #imagePreview {
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: contain;
+        }
+        #caption {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #uploadAnotherBtn {
+            background-color: #28a745;
+        }
+        #uploadAnotherBtn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Caption Generator</h1>
+        <div id="dropArea">
+            <p>Drag & Drop an image here or click to select</p>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+        <div class="image-container">
+            <img id="imagePreview" style="display: none;">
+        </div>
+        <button id="uploadBtn" class="btn" style="display: none;">Generate Caption</button>
+        <p id="caption"></p>
+        <button id="uploadAnotherBtn" class="btn" style="display: none;">Upload Another Image</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
